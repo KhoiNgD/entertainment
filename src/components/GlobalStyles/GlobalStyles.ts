@@ -6,10 +6,11 @@ const GlobalStyles = createGlobalStyle`
 */
 :root {
     --red: 0deg 97% 63%;
-    --blue: 223deg 30% 9%;
-    --dark-blue: 223deg 36% 14%;
+    --dark-blue: 223deg 30% 9%;
+    --semi-dark-blue: 223deg 36% 14%;
     --grey: 223deg 23% 46%;
     --white: 0deg 0% 100%;
+    --radius: 6px;
 }
 /*
   1. Use a more-intuitive box-sizing model.
