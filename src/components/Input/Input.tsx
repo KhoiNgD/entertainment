@@ -1,7 +1,7 @@
 import { BodyM } from "components/Typography";
 import styled from "styled-components";
 
-const Input = styled.input<{ error: string }>`
+const Input = styled.input<{ error?: string }>`
   ${BodyM}
   caret-color: hsl(var(--red));
   background: transparent;
