@@ -101,7 +101,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Input Props with Typescript](https://dev.to/giselamd/creating-a-react-input-component-in-typescript-hai) - This helped me for creating Input props type with typescript. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Responsive picture](https://css-tricks.com/responsive-images-css/) - This helped me for creating repsonsive images using picture and source tags.
+- [Description](https://example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
