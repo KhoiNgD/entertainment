@@ -9,4 +9,4 @@ function TVSeries({}: Props) {
   );
 }
 
-export default TVSeries;
+export { TVSeries };

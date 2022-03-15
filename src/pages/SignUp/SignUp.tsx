@@ -9,4 +9,4 @@ function SignUp({}: Props) {
   );
 }
 
-export default SignUp;
+export { SignUp };

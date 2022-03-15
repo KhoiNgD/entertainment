@@ -11,4 +11,4 @@ function Bookmarked({}: Props) {
   );
 }
 
-export default Bookmarked;
+export { Bookmarked };

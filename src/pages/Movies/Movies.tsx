@@ -9,4 +9,4 @@ function Movies({}: Props) {
   );
 }
 
-export default Movies;
+export { Movies };

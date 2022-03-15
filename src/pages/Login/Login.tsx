@@ -9,4 +9,4 @@ function Login({}: Props) {
   );
 }
 
-export default Login;
+export { Login };
