@@ -10,7 +10,6 @@ const GlobalStyles = createGlobalStyle`
     --semi-dark-blue: 223deg 36% 14%;
     --grey: 223deg 23% 46%;
     --white: 0deg 0% 100%;
-    --radius: 6px;
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -38,6 +37,8 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: hsl(var(--dark-blue));
+  color: hsl(var(--white));
 }
 /*
   6. Improve media defaults
