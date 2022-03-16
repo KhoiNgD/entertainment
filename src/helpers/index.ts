@@ -1,15 +1,19 @@
+interface Trending {
+  small: string;
+  large: string;
+}
+
+interface Regular {
+  small: string;
+  medium: string;
+  large: string;
+}
+
 export interface Data {
   title: string;
   thumbnail: {
-    trending: {
-      small: string;
-      large: string;
-    };
-    regular: {
-      small: string;
-      medium: string;
-      large: string;
-    };
+    trending?: Trending;
+    regular: Regular;
   };
   year: number;
   category: string;
@@ -22,14 +26,25 @@ export function getTrendings(data: Data[]) {
   return data.filter((item) => item.isTrending);
 }
 
-export function getThumbnailSrcs(data: Data, isTrending = false) {
-  const { thumbnail } = data;
-  const thumbnailType = isTrending ? "trending" : "regular";
+export function getTrendingSrcs(data: Data) {
+  const { trending } = data.thumbnail;
 
   return {
-    large: thumbnail[thumbnailType].large,
-    medium: isTrending ? thumbnail.trending.large : thumbnail.regular.medium,
-    small: thumbnail[thumbnailType].small,
+    large: trending!.large,
+    medium: trending!.large,
+    small: trending!.small,
+    alt: `${data.title}'s poster`,
+  };
+}
+
+export function getRegularSrcs(data: Data) {
+  const { regular } = data.thumbnail;
+  const { large, medium, small } = regular;
+
+  return {
+    large,
+    medium,
+    small,
     alt: `${data.title}'s poster`,
   };
 }

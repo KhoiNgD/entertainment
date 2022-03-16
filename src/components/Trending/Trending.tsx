@@ -1,9 +1,11 @@
 import { Thumbnail } from "components/Thumbnail";
 import { HeadingL } from "components/Typography";
-import { Data, getThumbnailInfor, getThumbnailSrcs } from "helpers";
+import { Data, getThumbnailInfor, getTrendingSrcs } from "helpers";
 import styled from "styled-components";
 
-function Trending(data: Data[]) {
+type Prop = { data: Data[] };
+
+function Trending({ data }: Prop) {
   return (
     <>
       <HeadingL>Trending</HeadingL>
@@ -11,7 +13,7 @@ function Trending(data: Data[]) {
         {data.map((item) => (
           <StyledThumbnail
             key={item.title}
-            {...getThumbnailSrcs(item)}
+            {...getTrendingSrcs(item)}
             {...getThumbnailInfor(item)}
           />
         ))}

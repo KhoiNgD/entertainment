@@ -34,8 +34,8 @@ function Thumbnail({
   return (
     <Wrapper>
       <picture>
-        <source media="(min-width: 1440px)" srcSet={`${large}`} />
-        <source media="(min-width: 768px)" srcSet={`${medium}`} />
+        <source media="(min-width: 1440px)" srcSet={large} />
+        <source media="(min-width: 768px)" srcSet={medium} />
         <img src={small} alt={alt} />
       </picture>
 
