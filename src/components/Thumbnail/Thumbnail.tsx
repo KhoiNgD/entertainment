@@ -3,16 +3,34 @@ import { ReactComponent as BookmarkEmptyIcon } from "assets/icon-bookmark-empty.
 import { ReactComponent as BookmarkFullIcon } from "assets/icon-bookmark-full.svg";
 import { ReactComponent as PlayIcon } from "assets/icon-play.svg";
 import { HeadingXS } from "components/Typography";
+import TrendingInformation from "./TrendingInformation";
+import Information from "./Information";
 
 interface Props {
+  // Thumbnail img props
   small: string;
   medium: string;
   large: string;
   alt: string;
+
+  // Thumbnail information props
+  category: string;
+  rating: string;
+  title: string;
+  year: number;
   isBookmarked: boolean;
+  isTrending: boolean;
 }
 
-function Thumbnail({ small, medium, large, alt, isBookmarked }: Props) {
+function Thumbnail({
+  small,
+  medium,
+  large,
+  alt,
+  isBookmarked,
+  isTrending,
+  ...informationProps
+}: Props) {
   return (
     <Wrapper>
       <picture>
@@ -31,6 +49,12 @@ function Thumbnail({ small, medium, large, alt, isBookmarked }: Props) {
       <BookmarkWrapper>
         {isBookmarked ? <BookmarkFullIcon /> : <BookmarkEmptyIcon />}
       </BookmarkWrapper>
+
+      {isTrending ? (
+        <TrendingInformation {...informationProps} />
+      ) : (
+        <Information {...informationProps} />
+      )}
     </Wrapper>
   );
 }
