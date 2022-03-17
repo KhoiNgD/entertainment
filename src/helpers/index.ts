@@ -26,6 +26,10 @@ export function getTrendings(data: Data[]) {
   return data.filter((item) => item.isTrending);
 }
 
+export function getRegulars(data: Data[]) {
+  return data.filter((item) => !item.isTrending);
+}
+
 export function getTrendingSrcs(data: Data) {
   const { trending } = data.thumbnail;
 
