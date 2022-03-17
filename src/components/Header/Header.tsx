@@ -35,7 +35,7 @@ function Header() {
 }
 
 const Wrapper = styled.header`
-  height: calc(100vh - 64px);
+  height: min(960px, calc(100vh - 64px));
   display: flex;
   flex-direction: column;
   align-items: center;
