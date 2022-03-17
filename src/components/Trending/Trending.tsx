@@ -28,6 +28,7 @@ const ThumbnailWrapper = styled.div`
   gap: 40px;
   overflow-x: scroll;
   margin-top: 25px;
+  margin-right: calc(var(--padding-x) * -1);
 `;
 
 const StyledThumbnail = styled(Thumbnail)`
