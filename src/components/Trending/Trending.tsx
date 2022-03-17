@@ -26,12 +26,12 @@ const ThumbnailWrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 40px;
-  overflow: scroll;
+  overflow-x: scroll;
+  margin-top: 25px;
 `;
 
 const StyledThumbnail = styled(Thumbnail)`
-  max-width: 470px;
-  min-width: 240px;
+  min-width: 470px;
 `;
 
 export { Trending };

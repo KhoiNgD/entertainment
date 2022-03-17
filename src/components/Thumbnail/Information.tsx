@@ -9,9 +9,9 @@ function Information({ title, year, category, rating }: IThumbnailInformation) {
       <StyledDetails>
         <span>{year}</span>
         <Dot />
-        <span>
+        <Category>
           {getCategoryIcon(category)} {category}
-        </span>
+        </Category>
         <Dot />
         <span>{rating}</span>
       </StyledDetails>
@@ -21,6 +21,12 @@ function Information({ title, year, category, rating }: IThumbnailInformation) {
 }
 
 const Wrapper = styled.div``;
+
+const Category = styled.span`
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+`;
 
 const StyledDetails = styled(Details)`
   ${BodyS}

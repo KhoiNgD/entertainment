@@ -7,6 +7,8 @@ import TrendingInformation from "./TrendingInformation";
 import Information from "./Information";
 
 interface Props {
+  className?: string;
+
   // Thumbnail img props
   small: string;
   medium: string;
@@ -23,6 +25,7 @@ interface Props {
 }
 
 function Thumbnail({
+  className,
   small,
   medium,
   large,
@@ -32,29 +35,33 @@ function Thumbnail({
   ...informationProps
 }: Props) {
   return (
-    <Wrapper>
-      <picture>
-        <source media="(min-width: 1440px)" srcSet={large} />
-        <source media="(min-width: 768px)" srcSet={medium} />
-        <img src={small} alt={alt} />
-      </picture>
+    <Wrapper className={className}>
+      <ThumbnailWrapper>
+        <picture>
+          <source media="(min-width: 1440px)" srcSet={large} />
+          <source media="(min-width: 768px)" srcSet={medium} />
+          <img src={small} alt={alt} />
+        </picture>
 
-      <Overlay>
-        <PlayWrapper>
-          <PlayIcon />
-          <HeadingXS>Play</HeadingXS>
-        </PlayWrapper>
-      </Overlay>
+        <Overlay>
+          <PlayWrapper>
+            <PlayIcon />
+            <HeadingXS>Play</HeadingXS>
+          </PlayWrapper>
+        </Overlay>
 
-      <BookmarkWrapper>
-        {isBookmarked ? <BookmarkFullIcon /> : <BookmarkEmptyIcon />}
-      </BookmarkWrapper>
+        <BookmarkWrapper>
+          {isBookmarked ? <BookmarkFullIcon /> : <BookmarkEmptyIcon />}
+        </BookmarkWrapper>
+      </ThumbnailWrapper>
 
-      {isTrending ? (
-        <TrendingInformation {...informationProps} />
-      ) : (
-        <Information {...informationProps} />
-      )}
+      <InformationWrapper>
+        {isTrending ? (
+          <TrendingInformation {...informationProps} />
+        ) : (
+          <Information {...informationProps} />
+        )}
+      </InformationWrapper>
     </Wrapper>
   );
 }
@@ -73,8 +80,6 @@ const Overlay = styled.div`
 `;
 
 const Wrapper = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
   cursor: pointer;
   position: relative;
 
@@ -83,6 +88,12 @@ const Wrapper = styled.div`
       display: flex;
     }
   }
+`;
+
+const ThumbnailWrapper = styled.div`
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 `;
 
 const BookmarkWrapper = styled.div`
@@ -111,6 +122,10 @@ const BookmarkWrapper = styled.div`
     top: 8px;
     right: 8px;
   }
+`;
+
+const InformationWrapper = styled.div`
+  margin-top: 7px;
 `;
 
 const PlayWrapper = styled.div`

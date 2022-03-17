@@ -14,9 +14,9 @@ function TrendingInformation({
       <StyledDetails>
         <span>{year}</span>
         <Dot />
-        <span>
+        <Category>
           {getCategoryIcon(category)} {category}
-        </span>
+        </Category>
         <Dot />
         <span>{rating}</span>
       </StyledDetails>
@@ -29,6 +29,12 @@ const Wrapper = styled.div`
   position: absolute;
   left: 24px;
   bottom: 24px;
+`;
+
+const Category = styled.span`
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 `;
 
 const StyledDetails = styled(Details)`
