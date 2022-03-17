@@ -24,6 +24,7 @@ const Icon = styled.div`
 `;
 
 const Field = styled(Input)`
+  width: 100%;
   font-size: 24px;
   padding-left: 0;
   padding-bottom: 15px;
