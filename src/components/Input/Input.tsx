@@ -7,7 +7,7 @@ const Input = styled.input<{ error?: string }>`
   background: transparent;
   outline: none;
   border: none;
-  border-bottom: 1px solid hsl(var(--grey));
+  box-shadow: 0 1px 0 hsl(var(--grey));
   padding-right: ${(props) => (props.error ? `${props.error.length}ch` : "0")};
   padding-left: 16px;
   padding-bottom: 18px;
@@ -18,11 +18,11 @@ const Input = styled.input<{ error?: string }>`
 
   &:focus,
   &:active {
-    border-bottom-color: currentColor;
+    box-shadow: 0 1px 0 currentColor;
   }
 
   &:invalid {
-    border-bottom-color: hsl(var(--red));
+    box-shadow: 0 1px 0 hsl(var(--red));
   }
 `;
 

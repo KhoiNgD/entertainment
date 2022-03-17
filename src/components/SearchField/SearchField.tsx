@@ -33,7 +33,7 @@ const Field = styled(Input)`
 
   &:focus,
   &:active {
-    border-bottom: 1px solid hsl(var(--grey));
+    box-shadow: 0 1px 0 hsl(var(--grey));
   }
 `;
 
