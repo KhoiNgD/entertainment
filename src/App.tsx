@@ -24,6 +24,7 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   --padding-x: 36px;
+  margin-top: 32px;
   flex: 1;
   padding: 0 var(--padding-x);
   overflow: hidden;
