@@ -65,6 +65,36 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/* 
+  10. Style scrollbar
+*/
+html::-webkit-scrollbar {
+  display: none;
+}
+/* html {
+  --scrollbar-background: hsl(210deg, 15%, 6.25%);
+  --scrollbar-text: hsl(210deg, 10%, 90%);
+  --scrollbar-gray-300: hsl(210deg, 10%, 40%);
+  --scrollbar-gray-500: hsl(210deg, 8%, 50%);
+
+  scrollbar-color: var(--scrollbar-gray-300) var(--scrollbar-background);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: var(--scrollbar-background);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1000px;
+    background-color: var(--scrollbar-gray-300);
+    border: 2px solid var(--scrollbar-background);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-gray-500);
+  }
+} */
 `;
 
 export default GlobalStyles;
