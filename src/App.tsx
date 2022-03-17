@@ -17,11 +17,14 @@ function App() {
 
 const Wrapper = styled.div`
   display: flex;
-  gap: 36px;
   padding-top: 32px;
   padding-left: 32px;
 `;
 
-const Main = styled.main``;
+const Main = styled.main`
+  flex: 1;
+  padding: 0 36px;
+  overflow: hidden;
+`;
 
 export default App;
