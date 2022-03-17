@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   display: flex;
   padding-top: 32px;
   padding-left: 32px;
+  padding-bottom: 52px;
 `;
 
 const Main = styled.main`

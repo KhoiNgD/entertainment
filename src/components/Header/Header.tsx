@@ -35,21 +35,24 @@ function Header() {
 }
 
 const Wrapper = styled.header`
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
   background: hsl(var(--semi-dark-blue));
   border-radius: 20px;
   padding: 32px 28px;
-
-  /* TODO: remove gap */
-  gap: 75px;
+  position: sticky;
+  top: 32px;
+  left: 0;
 `;
 
 const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 75px;
+  margin-bottom: auto;
 `;
 
 const StyledNavLink = styled(NavLink)`
