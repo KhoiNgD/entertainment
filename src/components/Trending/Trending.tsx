@@ -54,10 +54,18 @@ const ThumbnailWrapper = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background-color: var(--scrollbar-gray-500);
   }
+
+  @media (max-width: 550px) {
+    gap: 16px;
+  }
 `;
 
 const StyledThumbnail = styled(Thumbnail)`
   min-width: 470px;
+
+  @media (max-width: 550px) {
+    min-width: 240px;
+  }
 `;
 
 export { Trending };

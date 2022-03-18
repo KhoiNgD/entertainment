@@ -39,6 +39,10 @@ const Category = styled.span`
 
 const StyledDetails = styled(Details)`
   ${BodyM}
+
+  @media (max-width: 550px) {
+    margin-bottom: 4px;
+  }
 `;
 
 export default TrendingInformation;

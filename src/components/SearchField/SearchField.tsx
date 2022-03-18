@@ -38,6 +38,10 @@ const Field = styled(Input)`
   &:active {
     box-shadow: 0 1px 0 hsl(var(--grey));
   }
+
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 
 export { SearchField };

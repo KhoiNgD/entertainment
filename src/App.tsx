@@ -31,6 +31,11 @@ const Wrapper = styled.div`
     padding: 24px;
     padding-right: 0;
   }
+
+  @media (max-width: 550px) {
+    --padding-x: 16px;
+    padding: 0;
+  }
 `;
 
 const Main = styled.main`
@@ -43,6 +48,11 @@ const Main = styled.main`
     flex-direction: column;
     padding: 0;
     padding-right: var(--padding-x);
+  }
+
+  @media (max-width: 550px) {
+    --padding-x: 16px;
+    padding: 0 var(--padding-x);
   }
 `;
 

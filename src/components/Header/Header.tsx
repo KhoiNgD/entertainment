@@ -54,6 +54,12 @@ const Wrapper = styled.header`
     padding: 24px;
     margin-right: var(--padding-x);
   }
+
+  @media (max-width: 550px) {
+    padding: 18px 16px;
+    border-radius: revert;
+    margin: 0;
+  }
 `;
 
 const Navigation = styled.nav`

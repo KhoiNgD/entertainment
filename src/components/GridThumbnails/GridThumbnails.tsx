@@ -34,6 +34,11 @@ const Grid = styled.div`
     column-gap: 30px;
     row-gap: 24px;
   }
+
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+    grid-gap: 16px;
+  }
 `;
 
 export { GridThumbnails };
