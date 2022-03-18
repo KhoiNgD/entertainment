@@ -1,11 +1,18 @@
-type Props = {};
+import { GridThumbnails } from "components/GridThumbnails";
+import { SearchField } from "components/SearchField";
+import { useData } from "context/data-context";
 
-function Movies({}: Props) {
+function Movies() {
+  const [data] = useData();
+  const movies = data
+    .filter((item) => item.category === "Movie")
+    .map((item) => ({ ...item, isTrending: false }));
+
   return (
-    <div>
-      Search for movies Movies
-      {/* <!-- Display all movies --> */}
-    </div>
+    <>
+      <SearchField placeholder="Search for Movies" />
+      <GridThumbnails data={movies} heading="Movies" />
+    </>
   );
 }
 
