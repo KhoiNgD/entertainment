@@ -2,13 +2,15 @@ import styled from "styled-components";
 import { ReactComponent as SearchIcon } from "assets/icon-search.svg";
 import { Input } from "components/Input";
 
-function SearchField() {
+type Prop = { placeholder: string };
+
+function SearchField({ placeholder }: Prop) {
   return (
     <Wrapper>
       <Icon>
         <SearchIcon />
       </Icon>
-      <Field placeholder="Search for movies or TV series" />
+      <Field placeholder={placeholder} />
     </Wrapper>
   );
 }
@@ -17,6 +19,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: baseline;
   gap: 24px;
+  margin-bottom: 34px;
 `;
 
 const Icon = styled.div`

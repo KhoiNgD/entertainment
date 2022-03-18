@@ -1,8 +1,17 @@
 import { Data } from "helpers";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import state from "../data/data.json";
 
-const DataContext = React.createContext([]);
+type Context = [data: Data[], setContext: Dispatch<SetStateAction<Context>>];
+
+const initialContext: Context = [
+  [],
+  (): void => {
+    throw new Error("setContext function must be overriden");
+  },
+];
+
+const DataContext = React.createContext<Context>(initialContext);
 
 function DataProvider(props: any) {
   const [data, setData] = React.useState<Data[]>(state);

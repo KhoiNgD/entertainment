@@ -7,7 +7,7 @@ type Props = { heading: string; data: Data[] };
 
 function GridThumbnails({ heading, data }: Props) {
   return (
-    <>
+    <div>
       <HeadingL>{heading}</HeadingL>
       <Grid>
         {data.map((item) => (
@@ -18,7 +18,7 @@ function GridThumbnails({ heading, data }: Props) {
           />
         ))}
       </Grid>
-    </>
+    </div>
   );
 }
 

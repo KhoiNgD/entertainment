@@ -12,21 +12,19 @@ function Home() {
 
   return (
     <>
-      <SearchField />
-      <Margin height={20} />
-      <Trending data={trendings} />
-      <Margin height={40} />
-      <GridThumbnails data={regulars} heading="Recommeded for you" />
+      <SearchField placeholder="Search for movies or TV series" />
+      <Wrapper>
+        <Trending data={trendings} />
+        <GridThumbnails data={regulars} heading="Recommeded for you" />
+      </Wrapper>
     </>
   );
 }
 
-interface MarginProp {
-  height: number;
-}
-
-const Margin = styled.div<MarginProp>`
-  height: ${(prop) => prop.height}px;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 `;
 
 export { Home };

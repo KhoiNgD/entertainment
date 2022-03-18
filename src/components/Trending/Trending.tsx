@@ -7,7 +7,7 @@ type Prop = { data: Data[] };
 
 function Trending({ data }: Prop) {
   return (
-    <>
+    <div>
       <HeadingL>Trending</HeadingL>
       <ThumbnailWrapper>
         {data.map((item) => (
@@ -18,7 +18,7 @@ function Trending({ data }: Prop) {
           />
         ))}
       </ThumbnailWrapper>
-    </>
+    </div>
   );
 }
 
