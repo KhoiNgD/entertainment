@@ -1,11 +1,18 @@
-type Props = {};
+import { GridThumbnails } from "components/GridThumbnails";
+import { SearchField } from "components/SearchField";
+import { useData } from "context/data-context";
 
-function TVSeries({}: Props) {
+function TVSeries() {
+  const [data] = useData();
+  const tvseries = data
+    .filter((item) => item.category === "TV Series")
+    .map((item) => ({ ...item, isTrending: false }));
+
   return (
-    <div>
-      Search for TV series TV Series
-      {/* <!-- Display all TV series --> */}
-    </div>
+    <>
+      <SearchField placeholder="Search for TV series" />
+      <GridThumbnails data={tvseries} heading="TV Series" />
+    </>
   );
 }
 
