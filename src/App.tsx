@@ -1,4 +1,5 @@
 import { Header } from "components/Header";
+import { DataProvider } from "context/data-context";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
@@ -7,9 +8,11 @@ function App() {
   return (
     <Wrapper>
       <Header />
-      <Main>
-        <Outlet />
-      </Main>
+      <DataProvider>
+        <Main>
+          <Outlet />
+        </Main>
+      </DataProvider>
       <GlobalStyles />
     </Wrapper>
   );

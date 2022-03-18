@@ -1,11 +1,12 @@
 import { GridThumbnails } from "components/GridThumbnails";
 import { SearchField } from "components/SearchField";
 import { Trending } from "components/Trending";
-import data from "data/data.json";
+import { useData } from "context/data-context";
 import { getRegulars, getTrendings } from "helpers";
 import styled from "styled-components";
 
 function Home() {
+  const [data] = useData();
   const trendings = getTrendings(data);
   const regulars = getRegulars(data);
 
