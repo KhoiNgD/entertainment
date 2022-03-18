@@ -28,6 +28,12 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   column-gap: 40px;
   row-gap: 32px;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    column-gap: 30px;
+    row-gap: 24px;
+  }
 `;
 
 export { GridThumbnails };

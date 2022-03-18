@@ -51,10 +51,6 @@ const ThumbnailWrapper = styled.div`
     background-color: var(--scrollbar-gray-300);
     border: 2px solid var(--scrollbar-background);
   }
-  /*
-    Little bonus: on non-Firefox browsers,
-    the thumb will light up on hover!
-  */
   &::-webkit-scrollbar-thumb:hover {
     background-color: var(--scrollbar-gray-500);
   }

@@ -45,6 +45,15 @@ const Wrapper = styled.header`
   position: sticky;
   top: 32px;
   left: 0;
+
+  @media (max-width: 1100px) {
+    height: revert;
+    position: revert;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+    margin-right: var(--padding-x);
+  }
 `;
 
 const Navigation = styled.nav`
@@ -53,6 +62,12 @@ const Navigation = styled.nav`
   gap: 40px;
   margin-top: 75px;
   margin-bottom: auto;
+
+  @media (max-width: 1100px) {
+    flex-direction: row;
+    gap: 32px;
+    margin: 0;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
