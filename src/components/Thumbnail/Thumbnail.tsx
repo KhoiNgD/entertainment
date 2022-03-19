@@ -5,6 +5,8 @@ import { ReactComponent as PlayIcon } from "assets/icon-play.svg";
 import { HeadingXS } from "components/Typography";
 import TrendingInformation from "./TrendingInformation";
 import Information from "./Information";
+import { useData } from "context/data-context";
+import { DataActionType } from "helpers";
 
 interface Props {
   className?: string;
@@ -34,6 +36,15 @@ function Thumbnail({
   isTrending,
   ...informationProps
 }: Props) {
+  const [, dispatch] = useData();
+
+  function handleBookmark() {
+    dispatch({
+      type: DataActionType.BOOKMARK,
+      payload: informationProps.title,
+    });
+  }
+
   return (
     <Wrapper className={className}>
       <ThumbnailWrapper>
@@ -50,7 +61,7 @@ function Thumbnail({
           </PlayWrapper>
         </Overlay>
 
-        <BookmarkWrapper>
+        <BookmarkWrapper onClick={handleBookmark}>
           {isBookmarked ? <BookmarkFullIcon /> : <BookmarkEmptyIcon />}
         </BookmarkWrapper>
       </ThumbnailWrapper>

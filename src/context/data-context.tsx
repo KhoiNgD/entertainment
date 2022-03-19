@@ -21,6 +21,16 @@ function reducer(state: Data[], action: DataAction) {
     );
   }
 
+  if (type === DataActionType.BOOKMARK) {
+    return data.map((item) => {
+      const newItem = { ...item };
+      if (newItem.title === payload) {
+        newItem.isBookmarked = !newItem.isBookmarked;
+      }
+      return newItem;
+    });
+  }
+
   return data;
 }
 

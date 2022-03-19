@@ -24,6 +24,7 @@ export interface Data {
 
 export enum DataActionType {
   SEARCH = "search",
+  BOOKMARK = "bookmark",
 }
 
 export interface DataAction {
