@@ -1,16 +1,28 @@
 import styled from "styled-components";
 import { ReactComponent as SearchIcon } from "assets/icon-search.svg";
 import { Input } from "components/Input";
+import { useData } from "context/data-context";
+import React from "react";
+import { DataActionType } from "helpers";
 
 type Prop = { placeholder: string };
 
 function SearchField({ placeholder }: Prop) {
+  const [, dispatch] = useData();
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    dispatch({
+      type: DataActionType.SEARCH,
+      payload: event.target.value,
+    });
+  }
+
   return (
     <Wrapper>
       <Icon>
         <SearchIcon />
       </Icon>
-      <Field placeholder={placeholder} />
+      <Field onChange={handleChange} placeholder={placeholder} />
     </Wrapper>
   );
 }
