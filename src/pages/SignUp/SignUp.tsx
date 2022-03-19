@@ -1,6 +1,4 @@
-type Props = {};
-
-function SignUp({}: Props) {
+function SignUp() {
   return (
     <div>
       Sign Up Email address Password Repeat password Create an account Already

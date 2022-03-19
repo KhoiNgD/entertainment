@@ -1,6 +1,4 @@
-type Props = {};
-
-function Login({}: Props) {
+function Login() {
   return (
     <div>
       Login Email address Password Login to your account Don't have an account?
