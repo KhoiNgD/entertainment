@@ -1,15 +1,16 @@
 import { GridThumbnails } from "components/GridThumbnails";
 import { SearchField } from "components/SearchField";
 import { useData } from "context/data-context";
+import { DataType } from "helpers";
 import styled from "styled-components";
 
 function Bookmarked() {
   const [data] = useData();
   const bookmarkedMovies = data
-    .filter((item) => item.category === "Movie" && item.isBookmarked)
+    .filter((item) => item.category === DataType.MOVIE && item.isBookmarked)
     .map((item) => ({ ...item, isTrending: false }));
   const bookmarkedTVSeries = data
-    .filter((item) => item.category === "TV Series" && item.isBookmarked)
+    .filter((item) => item.category === DataType.TV_SERIES && item.isBookmarked)
     .map((item) => ({ ...item, isTrending: false }));
 
   return (

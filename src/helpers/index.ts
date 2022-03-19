@@ -31,7 +31,7 @@ export interface DataAction {
   payload: string;
 }
 
-export enum MovieType {
+export enum DataType {
   MOVIE = "Movie",
   TV_SERIES = "TV Series",
 }
