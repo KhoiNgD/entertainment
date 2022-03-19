@@ -11,9 +11,11 @@ function SearchField({ placeholder }: Prop) {
   const [, dispatch] = useData();
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const payload = event.target.value;
+    sessionStorage.setItem(DataActionType.SEARCH, payload);
     dispatch({
       type: DataActionType.SEARCH,
-      payload: event.target.value,
+      payload,
     });
   }
 
@@ -22,7 +24,11 @@ function SearchField({ placeholder }: Prop) {
       <Icon>
         <SearchIcon />
       </Icon>
-      <Field onChange={handleChange} placeholder={placeholder} />
+      <Field
+        onChange={handleChange}
+        placeholder={placeholder}
+        value={`${sessionStorage.getItem(DataActionType.SEARCH) || ""}`}
+      />
     </Wrapper>
   );
 }
