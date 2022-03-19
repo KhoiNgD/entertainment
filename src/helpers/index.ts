@@ -22,6 +22,20 @@ export interface Data {
   isTrending: boolean;
 }
 
+export enum DataActionType {
+  SEARCH = "search",
+}
+
+export interface DataAction {
+  type: DataActionType;
+  payload: string;
+}
+
+export enum MovieType {
+  MOVIE = "Movie",
+  TV_SERIES = "TV Series",
+}
+
 export function getTrendings(data: Data[]) {
   return data.filter((item) => item.isTrending);
 }
